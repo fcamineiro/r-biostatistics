@@ -48,7 +48,7 @@ ui <- fluidPage(
 )
 
 # Define server logic
-server <- function(input, output) {
+server <- function(input, output, session) {
   results <- eventReactive(input$update, {
     if (input$outputType == "power") {
       pwr.t.test(d = (input$mu - input$mu0) / input$sd, 
@@ -89,5 +89,5 @@ server <- function(input, output) {
 }
 
 # Run the application 
-shinyApp(ui = ui, server = server)
+shinyApp(ui, server)
 
