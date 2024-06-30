@@ -22,7 +22,7 @@
     },
     "license": "MIT",
     "scripts": {
-      "start": "R -e \"shiny::runApp('shiny')\""
+      "start": "R -e \"shiny::runApp()\""
     }
   }
   
